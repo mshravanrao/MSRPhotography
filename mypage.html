@@ -1,0 +1,300 @@
+<DOCTYPE HTML>
+<html>
+<head>
+			<title></title>
+			<meta charset="utf8">
+			<meta name="viewpoint" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="bootstrap.min.css">
+			<link rel="stylesheet" href="_variables.scss">
+	<script type="text/javascript">
+		if(!(confirm("This website uses coockies. Will you like to further work with it?")))
+			{
+			window.history.back();
+		}
+		$('#myCarousel').carousel({
+    	interval: 1200
+		});
+		function colch(){
+			var col =document.getElementById("mysel").value;
+			document.body.style.backgroundColor=col;
+		}
+		function myFunction() {
+ 	 		var dots = document.getElementById("dots");
+  			var moreText = document.getElementById("more");
+ 		 	var btnText = document.getElementById("myBtn");
+
+  			if (dots.style.display === "none") {
+  	  			dots.style.display = "inline";
+   	 			btnText.innerHTML = "Get e-mail alerts"; 
+  	  			moreText.style.display = "none";
+ 	 		}
+ 	 		 else {
+  	  			dots.style.display = "none";
+ 	   			btnText.innerHTML = "Get e-mail alerts"; 
+  	  			moreText.style.display = "inline";
+ 	 		}
+	}
+	function callsub(){
+		alert("An E-mail is sent to you");
+		if(document.getElementById("check").checked){
+			alert("You will recieve regular notifications from us");
+		}
+	}
+	</script>
+	<style>
+	html{
+		scroll-behavior: smooth;
+	}
+  body{
+
+  	background-color:fff;
+  	overflow-x: hidden;
+  	padding-top: 0%;
+  }
+  .header {
+  	position: sticky;
+  width: cover;
+  top: 0; 
+  padding: 10px 16px;
+  background: #fff;
+  color: #f1f1f1;
+}
+
+.shadow{
+	margin:2%;
+	width:40%;
+	height:auto;
+}
+.sunray{
+	margin:2%;
+	width:40%;
+	height:auto;
+}
+
+.carousel-inner img{
+      width: 40%;
+      height:auto;
+  }
+.carousel-control-prev-icon, .carousel-control-next-icon{
+		filter: invert(100%); 
+		 }
+
+.imgs{
+  	margin-top:2%;
+  	margin-right:2%;
+  	width:65%;
+  	height:auto;
+  }
+.collapse ul{
+		width:cover;
+		height:auto;
+		font-size: 130%;
+	  	margin-right:15%;
+	  	}
+.collapse ul li{
+	white-space: nowrap;
+		width:cover;
+		margin-right: 15%;
+	  }	
+  .nav-item{
+  	width:auto;
+  	margin-right:5%;
+  }
+  .nav-link:hover{
+	color:white;
+	font-size: 102%;
+	border-bottom: purple 2px solid;
+}
+select{
+	float:right;
+}
+.uline{
+	border-bottom: 2px solid black;
+}
+.web{
+	width:20%;
+	height: auto;
+}
+.web:hover{
+	width:21%;
+	border: #aaaaff solid;
+}
+#more {
+	display: none;
+	}
+footer{
+	background-image: : url("images/tavare1.jpg");
+}
+  </style>
+</head>
+<body class="">
+	<header  class="header" id="myHeader">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+  <a class="navbar-brand" href="#"><img class="imgs" src="images/logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link " id="home" href="#home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link "  href="#about">About Us</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link " href="gallery.html" id="navbarDropdown" role="button">
+          Gallery
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+ </nav>
+  <select id="mysel" class="select-picker border-warning bg-warning text-dark" onchange="colch()">
+ 	<option value="white">Light</option>
+ 	<option value="grey">Dark</option>
+ 	 </select>	
+ </header>
+ <section>
+<div style="z-index: -1" id="demo" class="carousel slide demo" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner text-center" data-options="autoplay: 3000;">
+    <div class="carousel-item active">
+      <img src="images/car1.jpg" alt="Los Angeles" width="1100" height="500">
+      <div class="carousel-caption">
+    <h3>Rainy Race</h3>
+    <p>Photo 1</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/tavare1.jpg" alt="Chicago" width="1100" height="500">
+      <div class="carousel-caption">
+    <h3>Lotus</h3>
+    <p>Photo 2</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/shadow.jpg" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+    <h3>Sun Shine</h3>
+    <p>Photo 3</p>
+  </div>
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a  class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+</section>
+<section >
+	<div class="container-fluid mb-4 uline">
+		<hr class="w-25 mx-auto pt-5">
+		<h2 class="display-3 text-center text-bold text-dark p-5 "id="about">About Us</h2>
+		<p class="row display-4 text-center pr-5 pl-5" style="font-size: 150%;" ><b>
+			In M S R Photography, we have a team to click various beautiful photographs of natural and scenic beauties. We then frame it and present it in exhibitions, where people can even buy our products.<br>
+			People can 
+			People can also hire us for ocational shoots, such as wedding, photoshoots for advertisements, etc.<BR><BR>
+			<div ><BR></div><BR><BR><BR><BR><BR><BR> 
+		</b>
+		</p>
+	</div>
+</section>
+
+
+
+<section class=" text-center">
+	<h2 class="text-danger m-4">GALLERY</h2>
+	<div class="row text-center justify-content-center">
+		<div style="z-index: -1"class="col-lg-6 col-md-12 col-sm-12">
+			<img class="shadow" src="images/shadow_resized.jpg">
+		</div>
+		<div style="z-index: -1" class="col-lg-6 col-md-12 col-sm-12">
+			<img class="sunray" src="images/sunray_resized.jpg">
+		</div>
+	</div>
+	<div class="row justify-content-center">
+	<a href="gallery.html" class="btn btn-light border-warning text-danger m-3" id="visit"  role="button">Visit Gallery</a>
+</div>
+</section>
+
+
+
+<section class="bg-primary  justify-content-center">
+	<article class="py-4 text-white text-center">
+		<div class="">
+			<h3 class="row display-4 justify-content-center">+91 8197437360</h3>
+		<p class="row justify-content-center" style="font-size: 150%;" ><b>Call this number to know more details</b></p>
+			<button class="row btn btn-warning  " id="contact">Contact Now</button>
+		</div>
+		<div class="row justify-content-center m-4">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.196574142222!2d75.19515435072391!3d12.76574259094696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba493a6f987d623%3A0x61096104c285a905!2z4LKmIOCyteCzhuCyrOCzjSDgsqrgs4DgsqrgsrLgs40!5e0!3m2!1skn!2sin!4v1563965318962!5m2!1skn!2sin" width="450" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+		<div class="row justify-content-center text-center mt-5">
+		<a href="https://www.facebook.com/shravanraom"  ><img class="fb web" src="images/fb.jpg" >	</a>
+		<a href="https://www.instagram.com/mshravanrao12/"><img class="web" src="images/insta.jpg"></a>
+		<br>
+	</div>
+	<span id="dots">
+	<div class="row justify-content-center text-center mt-5">
+		<button class="bg-warning btn text-dark" onclick="myFunction()" id="myBtn">Get e-mail alerts</button>
+	</div>
+	</span>
+	<span id="more" class="">
+	<div class="input-group mt-5 pr-5 pl-5">
+		
+		<input id="name" type="text" class="form-control" name="name" placeholder="Name">
+	</div>
+	<div class="input-group mt-2 pr-5 pl-5">
+		
+		<input id="email" type="e-mail" class="form-control" name="email" placeholder="Email">
+	</div>
+	<div class="checkbox">
+  <label><p class="display-4" style="font-size: 150%;"><input type="checkbox" id="check" value="">Accept to recieve regular notifications</p></label>
+</div>
+	<div class="row justify-content-center text-center mt-2">
+		<input class="bg-warning btn text-dark" type="submit" onclick="callsub()" id="myBtn">
+	</div>
+</span>
+	</article>
+</section>
+
+
+
+<footer class="text-white bg-dark text-center">
+	<h4 class="mb-5 pt-4">Developer Details</h4>
+	<div class="row ">
+		<div class="col-lg-6 col-sm-12 mb-3">
+			M Shravan Rao<br>+918197437360<br>shravanrao634@gmail.com<br>
+		</div>
+		<div class="col-lg-6 col-sm-12">
+			M Shraddha Rao<br>+919980437360<br>mshraddharao21@gmail.com<br>
+		</div>
+	</div>
+	<div>
+		<br><br>
+	</div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+ 
+</body>
+</html>
